@@ -1,0 +1,13 @@
+<div>
+    <h2 class="text-xl font-bold">Blog List</h2>
+    <ul *ngIf="blogs.length; else noBlogs">
+      <li *ngFor="let blog of blogs" class="mb-4 p-4 border rounded">
+        <h3 class="font-semibold">{{ blog.title }}</h3>
+        <p>{{ blog.content }}</p>
+      </li>
+    </ul>
+    <ng-template #noBlogs>
+      <p>No blogs available.</p>
+    </ng-template>
+  </div>
+  
